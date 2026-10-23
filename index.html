@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor Médico IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Contenedor principal de la interfaz -->
+    <div class="chat-container">
+        
+        <!-- Encabezado del Consultor Médico -->
+        <header class="chat-header">
+            <div class="header-avatar">🩺</div>
+            <div class="header-info">
+                <h1>Consultor Médico IA</h1>
+                <p>Asistente virtual de trámites y consultas médicas</p>
+            </div>
+        </header>
+
+        <!-- Zona de Chat: Muestra el historial de mensajes y burbujas -->
+        <main class="zona de chat" id="zonaDeChat">
+            <div class="mensaje bot">
+                ¡Hola! 👋 Soy tu <strong>Consultor Médico IA</strong>. Puedo ayudarte con dudas sobre trámites, turnos, coberturas o información médica general. ¿En qué puedo ayudarte hoy?
+                <span class="timestamp">Justo ahora</span>
+            </div>
+        </main>
+
+        <!-- Zona de Escritura: Entrada de texto, botones y estado -->
+        <footer class="zona de escritura">
+            
+            <!-- Sugerencias rápidas para el usuario -->
+            <div class="quick-chips">
+                <button class="chip-btn" onclick="usarSugerencia('¿Cómo solicito un turno médico?')">🗓️ Turnos</button>
+                <button class="chip-btn" onclick="usarSugerencia('¿Qué documentos necesito para autorizar un estudio?')">📄 Requisitos</button>
+                <button class="chip-btn" onclick="usarSugerencia('¿Dónde consulto mi cobertura médica?')">🏥 Cobertura</button>
+            </div>
+
+            <!-- Formulario de envío de mensajes -->
+            <form id="chatForm" class="input-form">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Escribí tu consulta sobre trámites médicos..." 
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="sendBtn">
+                    <span>Enviar</span> 🚀
+                </button>
+            </form>
+
+            <!-- Mensaje de estado/carga para gestión asíncrona -->
+            <div id="statusMessage" class="status-message"></div>
+        </footer>
+
+    </div>
+
+    <!-- Carga de archivos de script -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
