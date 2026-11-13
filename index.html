@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,7 +21,7 @@
             </div>
         </header>
 
-        <!-- Zona de Chat: Muestra el historial de mensajes y burbujas -->
+        <!-- Zona de Chat -->
         <main class="zona de chat" id="zonaDeChat">
             <div class="mensaje bot">
                 ¡Hola! 👋 Soy tu <strong>Consultor Médico IA</strong>. Puedo ayudarte con dudas sobre trámites, turnos, coberturas o información médica general. ¿En qué puedo ayudarte hoy?
@@ -28,23 +29,24 @@
             </div>
         </main>
 
-        <!-- Zona de Escritura: Entrada de texto, botones y estado -->
+        <!-- Zona de Escritura -->
         <footer class="zona de escritura">
             
-            <!-- Sugerencias rápidas para el usuario -->
+            <!-- Sugerencias rápidas -->
             <div class="quick-chips">
                 <button class="chip-btn" onclick="usarSugerencia('¿Cómo solicito un turno médico?')">🗓️ Turnos</button>
                 <button class="chip-btn" onclick="usarSugerencia('¿Qué documentos necesito para autorizar un estudio?')">📄 Requisitos</button>
                 <button class="chip-btn" onclick="usarSugerencia('¿Dónde consulto mi cobertura médica?')">🏥 Cobertura</button>
             </div>
 
-            <!-- Formulario de envío de mensajes -->
+            <!-- Formulario de envío -->
             <form id="chatForm" class="input-form">
                 <input 
                     type="text" 
                     id="userInput" 
                     placeholder="Escribí tu consulta sobre trámites médicos..." 
                     autocomplete="off"
+                    maxlength="500"
                     required
                 >
                 <button type="submit" id="sendBtn">
@@ -52,13 +54,13 @@
                 </button>
             </form>
 
-            <!-- Mensaje de estado/carga para gestión asíncrona -->
+            <!-- Mensaje de estado -->
             <div id="statusMessage" class="status-message"></div>
         </footer>
 
     </div>
 
-    <!-- Carga de archivos de script -->
+    <!-- Configuración antes del script principal -->
     <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
